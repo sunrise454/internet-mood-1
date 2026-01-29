@@ -100,46 +100,7 @@
   </div>
 
   <script>
-    const moods = [
-      { emoji: "😵‍💫", text: "Everyone is tired,<br>but pretending it’s fine." },
-      { emoji: "🫠", text: "Mentally offline.<br>Physically still here." },
-      { emoji: "😐", text: "Nothing is wrong.<br>That’s the problem." },
-      { emoji: "🤡", text: "Acting productive.<br>Feeling like a joke." },
-      { emoji: "🥲", text: "Trying to relax.<br>Thinking about everything." }
-    ];
-
-    const backgrounds = [
-      "#0d0d0d",
-      "#111827",
-      "#1a1a1a",
-      "#0f172a",
-      "#020617"
-    ];
-
-    const today = new Date().toDateString();
-    const index = today.length % moods.length;
-
-    const mood = moods[index];
-    document.getElementById("emoji").innerText = mood.emoji;
-    document.getElementById("moodText").innerHTML = mood.text;
-
-    document.documentElement.style.setProperty(
-      "--bg",
-      backgrounds[index % backgrounds.length]
-    );
-
-    function shareMood() {
-      const text = `TODAY'S INTERNET MOOD ${mood.emoji}\n${mood.text.replace(/<br>/g, " ")}`;
-      navigator.clipboard.writeText(text);
-
-      const btn = document.querySelector("button");
-      btn.innerText = "copied. go touch grass.";
-      setTimeout(() => {
-        btn.innerText = "Share this mood";
-      }, 2000);
-    }
-  </script>
-<script>
+   <script>
   const moods = [
     { emoji: "😵‍💫", text: "Everyone is tired,<br>but pretending it’s fine." },
     { emoji: "🫠", text: "Mentally offline.<br>Physically still here." },
@@ -211,6 +172,8 @@
       btn.innerText = "Share this mood";
     }, 2000);
   }
+</script>
+
 </script>
 
 </body>
